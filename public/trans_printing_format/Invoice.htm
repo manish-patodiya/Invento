@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>New Page 1</title>
+</head>
+
+<body>
+
+    <p>&nbsp;</p>
+    <!--HS-->
+    <table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1" width="730" height="1087">
+        <tr>
+            <td colspan="3" height="78">
+                {header}
+            </td>
+        </tr>
+        <tr>
+            <td width="380" height="82" rowspan="4" valign="top" align="justify">
+                <b><font face="Times New Roman">Buyer :<br>
+		M/s.
+		{sName}<br>
+		</font></b>
+                <font face="Times New Roman">{sAddress}</font>
+            </td>
+            <td width="216" height="24">
+                <font face="Times New Roman">Invoice No:</font>
+                <font face="Times New Roman" size="3"> </font>
+                <font face="Times New Roman"> <b>{nInv_No1}</b></font>
+            </td>
+            <td width="143" height="24">
+                <font face="Times New Roman">Date: <b>{dtInv_Dt}</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td width="359" height="23" colspan="2">
+                <font face="Times New Roman">D.C No:<b> </b></font><b> 
+		<font face="Times New Roman">{nDc_No1}</font></b></td>
+        </tr>
+        <tr>
+            <td width="216" height="11" align="justify" valign="top">
+                <font face="Times New Roman">
+                    PO No :<b> 
+		</b></font><b> <font face="Times New Roman">
+		{sPO_No}&nbsp; </font>
+		</b></td>
+            <td width="143" height="11" align="justify" valign="top">
+                <font face="Times New Roman">
+                    Date :<b> </b></font><b> <font face="Times New Roman">
+		{dtPO_Dt}</font></b></td>
+        </tr>
+        <tr>
+            <td width="359" height="21" align="justify" valign="top" colspan="2">
+                <font face="Times New Roman">Payment :<b> </b></font><b> <font face="Times New Roman">
+		{sPayment}</font></b></td>
+        </tr>
+        <tr>
+            <td width="380" height="55" rowspan="3" valign="top" align="justify">
+                <b>
+		<font face="Times New Roman">{sName1}</font><font face="Times New Roman" size="3"><br>
+		</font>
+		</b>
+                <font face="Times New Roman">
+                    </b>{sAddress1}
+                </font>
+            </td>
+            <td width="359" height="23" colspan="2">
+                <font face="Times New Roman" size="3">Mode of Despatch :&nbsp;<b>{sTrn_Mode}</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td width="359" colspan="2" height="21">
+                <font face="Times New Roman" size="3">
+                    Vehicle No. : <b>{sVehc_No}</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td width="216" height="21">
+                <font face="Times New Roman" size="3">LR No. :&nbsp;<b>{sLR_No}</b></font>
+            </td>
+            <td width="143" height="21">
+                <font face="Times New Roman" size="3">Date : <b>{sLR_Dt}</b></font>
+            </td>
+        </tr>
+        <tr>
+            <td width="726" colspan="3" valign="top">
+                <table border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" id="table2" width="742" height="579" style="border-collapse: collapse">
+                    <tr>
+                        <td width="41" height="22" align="center" bgcolor="#C0C0C0">
+                            <font face="Times New Roman" size="3"><b>Sl.<br>
+				No</b></font>
+                        </td>
+                        <td height="22" width="283" align="center" bgcolor="#C0C0C0"><b>
+				<font face="Times New Roman" size="3">Description of Items</font></b></td>
+                        <td height="22" align="center" bgcolor="#C0C0C0" width="53">
+                            <font face="Times New Roman" size="3"><b>Qty</b></font>
+                        </td>
+                        <td height="22" align="center" bgcolor="#C0C0C0" width="46">
+                            <b><font face="Times New Roman" size="3">Unit</font></b></td>
+                        <td height="22" align="right" bgcolor="#C0C0C0" width="74">
+                            <p align="center">
+                                <b><font face="Times New Roman">Unit<br>
+				Price</font></b></td>
+                        <td height="22" align="right" width="51" bgcolor="#C0C0C0">
+                            <b><font face="Times New Roman" size="3">Disc %</font></b></td>
+                        <td height="22" align="right" width="115" bgcolor="#C0C0C0">
+                            <font face="Times New Roman" size="3"><b>Amount</b></font>
+                        </td>
+                    </tr>
+                    <!--HE-->
+                    {tblCols}
+                    <tr>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"> </td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                        <td style="border-top-style: none; border-top-width: medium; border-bottom-style: none; border-bottom-width: medium"></td>
+                    </tr>
+
+                    <!--<tr>
+				<td width="41" valign="top">
+				<font face="Times New Roman" size="3">{sSNo}</font>
+				<td width="283" valign="top"><font face="Times New Roman" size="3">{sDesc}              </font> </td>  
+				<td align="center" valign="top" width="53"><font face="Times New Roman" size="3">{sQty} </font> </td>
+				<td align="center" valign="top" width="46"><font face="Times New Roman" size="3">{sUnit}</font> </td>
+				<td align="right" valign="top" width="74"><font face="Times New Roman" size="3">{dRate} </font> </td>
+				<td align="right" width="51" valign="top"><font face="Times New Roman" size="3">{dDisc} </font> </td>
+				<td align="right" width="115" valign="top"><font face="Times New Roman" size="3">{dAmt} </font> </td>
+			</tr> -->
+                    <!--FS-->
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="380" height="64" valign="top">
+                <font face="Times New Roman" size="3"><b>Rupees :</b><br> {sRupees}
+                </font>
+            </td>
+            <td width="359" height="116" colspan="2" rowspan="2" align="justify">
+                <table border="1" width="359" cellpadding="0" id="table6" height="113" style="border-collapse: collapse" bordercolor="#000000">
+                    <!-- MSTableType="nolayout" -->
+                    <tr>
+                        <td height="22" align="left" valign="top" width="202"><b><font face="Times New Roman" size="3">
+				TOTAL</font></b></td>
+                        <td height="22" align="right" valign="top" width="154">
+                            <p align="right"><b><font face="Times New Roman" size="3">{dNet_Tot}</font></b></td>
+                    </tr>
+                    <tr>
+                        <td height="19" align="left" valign="top" width="202">
+                            <font face="Times New Roman" size="3">{sTax1}</font>
+                        </td>
+                        <td height="19" align="right" valign="top" width="154">
+                            <font face="Times New Roman" size="3">
+                                {dTax1_Amt}</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="19" align="left" valign="top" width="202">
+                            <font face="Times New Roman" size="3">{sTax2}</font>
+                        </td>
+                        <td height="19" align="right" valign="top" width="154">
+                            <font face="Times New Roman" size="3">
+                                {dTax2_Amt}</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="19" align="left" valign="top" width="202">
+                            <font face="Times New Roman" size="3">{sOth_Dt1}</font>
+                        </td>
+                        <td height="19" align="right" valign="top" width="154">
+                            <font face="Times New Roman" size="3">
+                                {dOth_Amt1}</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="19" align="left" valign="top" width="202">
+                            <font face="Times New Roman" size="3">{sOth_Dt2}</font>
+                        </td>
+                        <td height="19" align="right" valign="top" width="154">
+                            <p align="right">
+                                <font face="Times New Roman" size="3">{dOth_Amt2}</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" valign="top" width="202"><b>
+				<font face="Times New Roman" size="3">GRAND TOTAL</font></b></td>
+                        <td height="20" align="right" valign="top" width="154"><b>
+				<font face="Times New Roman" size="3">{dGrand_Total}</font></b></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="380" height="53" valign="top">
+                <font face="Times New Roman" size="2">1. Goods once sold will not be taken back.<br> 2. Interest @ 24% will be charged for Payments after Due Date.<br> 3. All Disputes subject to Bangalore Jurisdiction Only.</font>
+            </td>
+        </tr>
+        <tr>
+            <td width="380" height="82" valign="top" align="center">
+                <p align="left">
+                    <font face="Times New Roman" size="3">Received the above goods in good condition</font>
+            </td>
+            <td width="359" height="82" colspan="2" valign="top">
+                <p align="center">
+                    <font face="Times New Roman" size="3">For
+                        <b>{Comp}</b></font>
+                </p>
+                <p align="center">
+                    <font face="Times New Roman" size="3">
+                        <br> Authorised Signatory</font>
+            </td>
+        </tr>
+    </table>
+    <!--FE-->
+</body>
+
+</html>

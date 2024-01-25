@@ -1,0 +1,73 @@
+<table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1" width="730"
+    class="table table-bordered">
+    <tr>
+        <td colspan="3" height="78">
+            {header}
+        </td>
+    </tr>
+    {supplier_info_div}
+    <tr>
+        <td width="726" colspan="3" valign="top">
+            <table border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" id="table2" width="742"
+                style="border-collapse: collapse" class="table table-bordered">
+                <tr>
+                    <td width="10" height="22" align="center" bgcolor="#C0C0C0">
+                        <font face="Calibri" size="2"><b>Sl.No</b></font>
+                    </td>
+                    <td width="94" height="22" align="center" bgcolor="#C0C0C0">
+                        <b>
+                            <font face="Times New Roman">Ref. No.</font>
+                        </b>
+                    </td>
+                    <td height="22" width="109" align="center" bgcolor="#C0C0C0"><b>
+                            <font face="Times New Roman">Ref. Dt</font>
+                        </b></td>
+                    <td height="22" width="110" align="center" bgcolor="#C0C0C0"><b>
+                            Net Amount</b></td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="102">
+                        <b>
+                            <font face="Times New Roman">Paid Amount</font>
+                        </b>
+                    </td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="106">
+                        <b>
+                            <font face="Times New Roman">Tot. Paid Amt</font>
+                        </b>
+                    </td>
+                    <td height="22" align="right" bgcolor="#C0C0C0" width="99">
+                        <p align="center"><b>
+                                <font face="Times New Roman">Balance</font>
+                            </b>
+                    </td>
+
+                </tr>
+
+                {product_info}
+                <tr>
+                    <td class="text-center">
+                        <font face="Calibri" size="2">{sn}</font>
+                    </td>
+                    <td width="109" valign="top">
+                        <p align="center">
+                            <font face="Times New Roman" size="3">{reference_no}</font>
+                    <td width="110" valign="top">
+                        <p align="center">
+                            <font face="Times New Roman" size="3">{reference_date}</font>
+                    <td align="center" valign="top" width="102">
+                        <p align="center">
+                            <font face="Times New Roman" size="3">{total}</font>
+                    <td align="center" valign="top" width="106">
+                        <p align="center">
+                            <font face="Times New Roman" size="3">{total}</font>
+                    <td align="center" valign="top" width="99">
+                        <font face="Times New Roman" size="3">{total}</font>
+                    <td align="center" valign="top" width="99">
+                        <font face="Times New Roman" size="3">{total}</font>
+
+                </tr>
+                {/product_info} {/product_info}
+            </table>
+        </td>
+    </tr>
+    {grand_total_div}
+</table>

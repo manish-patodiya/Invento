@@ -1,0 +1,22 @@
+URL
+https://invento
+
+
+SuperAdmin
+username: superadmin
+password: 12345
+
+Company
+username: geeksit
+password: 12345
+
+Branch
+    usernmae: branch1
+    password: 12345
+
+    username: branch2
+    password:12345
+
+Staff
+username: supervisor2
+password: 12345

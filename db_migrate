@@ -1,0 +1,99 @@
+CREATE TABLE `invento`.`templates` ( `id` INT(5) NOT NULL AUTO_INCREMENT ,  `content` TEXT NOT NULL ,  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`id`)) ENGINE = InnoDB;
+ALTER TABLE `templates` ADD `title` VARCHAR(100) NOT NULL AFTER `id`;
+ALTER TABLE `templates` ADD `subject` VARCHAR(255) NOT NULL AFTER `title`;(all done)
+
+-- TODAY NEW TABLE ADD FOR COMPANIES IN DATA BASE
+TRUNCATE TABLE `companies`(done)
+
+
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `phone`, `password`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'superadmin', 'ys6727431@gmail.com', 'deepak', 'saini', '9602065385', '25d55ad283aa400af464c76d713c07ad', '1', '2022-05-20', NULL, NULL);
+SELECT * FROM `users` (Remove for Database)
+
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `phone`, `password`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'superadmin', 'ys6727431@gmail.com', 'arvind', 'jangir', '97824476604', '25d55ad283aa400af464c76d713c07ad', '1', '2022-05-23', NULL, NULL);
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `phone`, `password`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'admin', 'ys6727431@gmail.com', 'manish', 'patodiya', '9602065385', '25d55ad283aa400af464c76d713c07ad', '1', '2022-05-23', NULL, NULL);
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `phone`, `password`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'managers', 'ys6727431@gmail.com', 'rahul', 'singh', '9602065385', '25d55ad283aa400af464c76d713c07ad', '1', '2022-05-23', NULL, NULL);
+INSERT INTO `users` (`id`, `username`, `email`, `first_name`, `last_name`, `phone`, `password`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'users', 'ys6727431@gmail.com', 'deepak', 'saini', '6376893673', '25d55ad283aa400af464c76d713c07ad', '1', '2022-05-23', NULL, NULL);
+Expand Requery Edit Explain Profiling Bookmark Database : invento Queried time : 13:23:28
+SELECT * FROM `users`
+
+
+CREATE TABLE `invento`.`branches` ( `id` INT(11) NOT NULL AUTO_INCREMENT ,  `company_id` INT(11) NOT NULL ,  `title` TEXT NOT NULL ,  `name` TEXT NOT NULL ,  `phone` INT(11) NOT NULL ,  `email` TEXT NOT NULL ,  `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,  `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,  `deleted_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,    PRIMARY KEY  (`id`)) ENGINE = InnoDB;
+SELECT * FROM `branches`
+
+SELECT `role_id`, `role` FROM `user_roles` LEFT JOIN `roles` `r` ON `user_roles`.`role_id`=`r`.`id` WHERE `user_id` = '1';
+Expand Requery Edit Explain Profiling Bookmark Database : invento Queried time : 13:1:15
+SELECT * FROM `user_roles`
+
+UPDATE `roles` SET `role` = 'Super Admin' WHERE `roles`.`id` = 1;
+UPDATE `roles` SET `role` = 'Admin' WHERE `roles`.`id` = 2;
+UPDATE `roles` SET `role` = 'Managers' WHERE `roles`.`id` = 3;
+INSERT INTO `roles` (`id`, `role`) VALUES (NULL, 'Users');
+Expand Requery Edit Explain Profiling Bookmark Database : invento Queried time : 13:3:30
+SELECT * FROM `roles`
+
+INSERT INTO `user_roles` (`id`, `user_id`, `role_id`) VALUES ('1', '1', '1'), ('2', '2', '2'), ('3', '3', '3'), ('4', '4', '4');
+
+INSERT INTO `user_roles` (`id`, `role_id`, `permission_id`) VALUES ('1', '1', '1'), ('2', '1', '1'), ('3', '1', '1'), ('4', '1', '1');
+
+
+
+ALTER TABLE `company_branches`  ADD `state_id` INT(11) NOT NULL  AFTER `email`,  ADD `city_id` INT(11) NOT NULL  AFTER `state_id`;
+ALTER TABLE `users` ADD `state_id` INT(11) NOT NULL AFTER `address`, ADD `city_id` INT(11) NOT NULL AFTER `state_id`;
+
+ALTER TABLE `transaction_settings`  ADD `start_no` INT(11) NOT NULL  AFTER `prefix`;
+ALTER TABLE `companies`  ADD `start_no` INT(11) NOT NULL DEFAULT '1'  AFTER `is_active`;
+
+-- add tow col for invoices 
+ALTER TABLE `invoices` ADD `company_id` INT(11) NOT NULL AFTER `trans_type_id`, ADD `branch_id` INT(11) NOT NULL AFTER `company_id`;
+
+
+ALTER TABLE `invoices` ADD `choose_invoice` TINYINT(2) NOT NULL AFTER `status`;
+ALTER TABLE `invoices` ADD `return_type` TINYINT(2) NOT NULL AFTER `choose_invoice`;
+
+
+-- new changes......
+ALTER TABLE `companies` ADD `phonecode` INT(11) NOT NULL AFTER `cin`;
+ALTER TABLE `companies` ADD `country` INT(11) NOT NULL AFTER `state_id`;
+INSERT INTO `module` (`id`, `pid`, `title`, `controller`, `method`, `operations`, `feather_icon`, `sort_order`, `start_uri`, `other_uri`) VALUES (NULL, '0', 'users', 'users', '', 'edit|delete|view', 'user', '14', '', '');
+
+
+INSERT INTO`module_access`(`role_id`,`module_id`,`operation`)VALUES('1','50','edit');
+INSERT INTO`module_access`(`role_id`,`module_id`,`operation`)VALUES('1','50','delete');
+INSERT INTO`module_access`(`role_id`,`module_id`,`operation`)VALUES('1','50','view');
+
+DELETE FROM `module` WHERE `module`.`id` = 46
+DELETE FROM `module` WHERE `module`.`id` = 42
+
+---- 6-9-22 -----
+DROP TABLE `master_menu`, `menu`;
+DELETE FROM `module` WHERE `module`.`id` = 40
+
+UPDATE `module` SET `title` = 'City' WHERE `module`.`id` = 36;
+UPDATE `module` SET `title` = 'State' WHERE `module`.`id` = 37;
+UPDATE `module` SET `title` = 'Country' WHERE `module`.`id` = 38;
+UPDATE `module` SET `title` = 'Language' WHERE `module`.`id` = 39;
+
+-- 7-8-2022
+ALTER TABLE `users` CHANGE `phone` `phone` BIGINT(10) UNSIGNED NULL DEFAULT NULL;
+
+-- 9-8-2022
+ALTER TABLE `users` ADD UNIQUE(`username`);
+ALTER TABLE `company_branches` DROP `branches_date`;
+ALTER TABLE `products` CHANGE `low_stock` `low_stock` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '0';
+ALTER TABLE `products` ADD `catalog_name` VARCHAR(255) NOT NULL AFTER `product_img`;
+
+-- 10-8-2022
+ALTER TABLE `company_branches` ADD `country` INT(11) NOT NULL AFTER `gst_no`;
+ALTER TABLE `company_branches` ADD `pincode` INT(8) NOT NULL AFTER `address`;
+
+-- 11-9-2022
+ALTER TABLE `users` ADD `country_code` INT(11) NOT NULL AFTER `last_name`;
+ALTER TABLE `company_branches` ADD `country_code` INT(11) NOT NULL AFTER `name`;
+
+-- 12-9-2022
+INSERT INTO `module` (`id`, `pid`, `title`, `controller`, `method`, `operations`, `feather_icon`, `sort_order`, `start_uri`, `other_uri`) VALUES (NULL, '35', 'Transaction Setting', 'transactionsetting', '', 'edit', '', '0', 'settings', '');
+
+INSERT INTO `module` (`id`, `pid`, `title`, `controller`, `method`, `operations`, `feather_icon`, `sort_order`, `start_uri`, `other_uri`) VALUES (NULL, '35', 'Invoice Concept', 'invoiceconcept', '', 'edit', '', '0', 'settings', '');
+
+-- 14-9-22
+ALTER TABLE `users` CHANGE `status` `status` TINYINT(2) UNSIGNED NOT NULL COMMENT '1->active 2->deactive';

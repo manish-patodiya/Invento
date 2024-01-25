@@ -1,0 +1,62 @@
+<table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1" width="730" h
+    class="table table-bordered">
+    <tr>
+        <td colspan="3" height="78">
+            {header}
+        </td>
+    </tr>
+    {supplier_info_div}
+
+
+    <tr>
+        <td width="726" colspan="3" valign="top" style="padding:0">
+            <table border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" id="tbl-product" width="742"
+                style="border-collapse: collapse" class="table table-bordered">
+                <tr>
+                    <td width="10" height="22" align="center" bgcolor="#C0C0C0">
+                        <font face="Calibri" size="2"><b>Sl.No</b></font>
+                    </td>
+                    <td height="22" width="211" align="left" bgcolor="#C0C0C0"><b>
+                            <font face="Calibri" size="2">Description of Items</font>
+                        </b></td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="25">
+                        <font face="Calibri" size="2"><b>Qty.</b></font>
+                    </td>
+                    <td height="22" align="right" bgcolor="#C0C0C0" width="47">
+                        <p align="right">
+                            <b>
+                                <font face="Calibri" size="2">Unit </font>
+                            </b>
+                    </td>
+                </tr>
+
+                {product_info}
+                <tr>
+                    <td width="30" class="text-center">
+                        <font face="Calibri" size="2">{sn}</font>
+                    </td>
+                    <td width="519">
+                        <div style="display:flex">
+                            <div style="flex:1">
+                                <font face="Calibri" size="2" align="right">
+                                    {product_name}
+                                </font>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <font face="Calibri" size="2">{quantity}</font>
+                    </td>
+                    <td class="text-end">
+                        <font face="Calibri" size="2">{unit}</font>
+                    </td>
+                </tr>
+                {/product_info}
+            </table>
+        </td>
+    </tr>
+    {grand_total_div}
+    <tr>
+        {footer}
+    </tr>
+</table>

@@ -1,0 +1,94 @@
+<table border='1' style='border-collapse: collapse' bordercolor='#000000' id='table1' width='730' height='0'
+    class="table table-bordered">
+    <tr>
+        <td colspan="3" height="78">
+            {header}
+        </td>
+    </tr>
+    {supplier_info_div}
+    <tr>
+        <td width="726" colspan="3" valign="top" style="padding:0">
+            <table border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" id='tbl-product'
+                style="border-collapse: collapse" class="table table-bordered">
+                <tr>
+                    <td width="10" height="22" align="center" bgcolor="#C0C0C0">
+                        <font face="Calibri" size="2"><b>Sl.No</b></font>
+                    </td>
+                    <td height="22" width="211" align="left" bgcolor="#C0C0C0"><b>
+                            <font face="Calibri" size="2">Description of Items</font>
+                        </b></td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="25">
+                        <font face="Calibri" size="2"><b>Qty.</b></font>
+                    </td>
+                    <td height="22" align="right" bgcolor="#C0C0C0" width="47">
+                        <p align="right">
+                            <b>
+                                <font face="Calibri" size="2">Unit
+                                    Price</font>
+                            </b>
+                    </td>
+                    <td height="22" align="right" width="38" bgcolor="#C0C0C0">
+                        <b>
+                            <font face="Calibri" size="2">Discount.</font>
+                        </b>
+                    </td>
+                    <td height="22" align="right" width="54" bgcolor="#C0C0C0">
+                        <b>
+                            <font face="Calibri" size="2">Taxable Amt.</font>
+                        </b>
+                    </td>
+                    <td height="22" align="center" width="30" bgcolor="#C0C0C0">
+                        <b>
+                            <font face="Calibri" size="2">GST</font>
+                        </b>
+                    </td>
+                    <td height="22" align="right" width="100" bgcolor="#C0C0C0">
+                        <font face="Calibri" size="2"><b>Net Amount</b></font>
+                    </td>
+                </tr>
+
+                {product_info}
+                <tr>
+                    <td class="text-center">
+                        <font face="Calibri" size="2">{sn}</font>
+                    </td>
+                    <td width="211">
+                        <div style="display:flex">
+                            <div style="flex:8">
+                                <font face="Calibri" size="2" align="right">
+                                    {product_name}
+                                </font>
+                            </div>
+                            <div style="flex:4">
+                                <font face="Calibri" size="2" align="right" color="#a19c9c">{hsn_code}</font>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <font face="Calibri" size="2">{quantity}{unit}</font>
+                    </td>
+                    <td class="text-end">
+                        <font face="Calibri" size="2">{mrp}</font>
+                    </td>
+                    <td class="text-end">
+                        <font face="Calibri" size="2">{discount_amt}</font>
+                    </td>
+                    <td class="text-end">
+                        <font face="Calibri" size="2">{taxable_amt}</font>
+                    </td>
+                    <td class="text-center">
+                        <font face="Calibri" size="2">{gst_rate}%</font>
+                    </td>
+                    <td class="text-end"><b>
+                            <font face="Calibri" size="2">{total}</font>
+                        </b>
+                    </td>
+                </tr>
+                {/product_info} {grand_total_row}
+            </table>
+        </td>
+
+    </tr>
+    {grand_total_div}
+    <tr>{footer}</tr>
+</table>

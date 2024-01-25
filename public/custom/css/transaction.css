@@ -1,0 +1,47 @@
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-dropdown {
+    z-index: 10060 !important;
+}
+
+#tbl-tax tbody td,
+#tbl-tax tbody th {
+    text-align: right;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bg-slct {
+    background-color: #e4e6ef !important;
+    color: #172b4c;
+}
+
+#select2-slct-product-results {
+    max-height: 300px;
+}
+
+.flexDiv {
+    display: flex;
+}
+
+.opacity-40 {
+    opacity: 0.4 !important;
+}
+
+.hideRow,
+.hideDiv {
+    display: none;
+}

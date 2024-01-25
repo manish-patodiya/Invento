@@ -1,0 +1,65 @@
+<table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1" width="730"
+    class="table table-bordered">
+    <tr>
+        <td colspan="3" height="78">
+            {header}
+        </td>
+    </tr>
+    {supplier_info_div}
+    <tr>
+        <td width="726" colspan="3" valign="top" style="padding:0">
+            <table border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" id="tbl-product" width="742"
+                style="border-collapse: collapse" class="table table-bordered">
+                <tr>
+                    <td width="41" height="22" align="center" bgcolor="#C0C0C0">
+                        <font face="Times New Roman" size="3"><b>Sl.<br>
+                                No</b></font>
+                    </td>
+                    <td height="22" width="283" align="center" bgcolor="#C0C0C0"><b>
+                            <font face="Times New Roman" size="3">Description of Items</font>
+                        </b></td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="53">
+                        <font face="Times New Roman" size="3"><b>Qty</b></font>
+                    </td>
+                    <td height="22" align="center" bgcolor="#C0C0C0" width="46">
+                        <b>
+                            <font face="Times New Roman" size="3">Unit</font>
+                        </b>
+                    </td>
+                    <td height="22" align="right" bgcolor="#C0C0C0" width="74">
+                        <p align="center">
+                            <b>
+                                <font face="Times New Roman">Unit<br>
+                                    Price</font>
+                            </b>
+                    </td>
+                    <td height="22" align="right" width="115" bgcolor="#C0C0C0">
+                        <font face="Times New Roman" size="3"><b>Amount</b></font>
+                    </td>
+                </tr>
+
+                {product_info}
+                <tr>
+                    <td width="41" valign="top">
+                        <p align="center">
+                            <font face="Times New Roman" size="3">{sn}</font>&nbsp;
+                    <td width="283" valign="top">
+                        <font face="Times New Roman" size="3">{product_name} </font>
+                    <td align="center" valign="top" width="53">
+                        <font face="Times New Roman" size="3">{quantity}</font>
+                    <td align="center" valign="top" width="46">
+                        <font face="Times New Roman" size="3">{unit}</font>
+                    <td align="right" valign="top" width="74">
+                        <font face="Times New Roman" size="3">{mrp}</font>
+                    <td align="right" width="115" valign="top">
+                        <font face="Times New Roman" size="3">{total}</font>
+                </tr>
+                {/product_info}
+            </table>
+        </td>
+    </tr>
+    {grand_total_div}
+    <tr>
+        {footer}
+    </tr>
+</table>

@@ -1,0 +1,32 @@
+matrimonial search
+	card user image should be light 
+	image height width 
+	label padding 
+	dob and age changes
+	card width 
+	filter background color 
+	height null on card 
+	card icon adjustments
+	share icon is not working 
+matrimonial member details 
+	multiple request on card 
+	undefined years on card details
+	N/A should be remove on details
+	Partner Preferences (heading of details modal)
+send message 
+	success message should be align to button 
+	Loader should be hide on complete
+member profile page not working properly on responsive resolutions
+
+Forget password 
+register page change sequence of name and phone 
+
+
+card shadow should be same everywhere
+null should not be displayed anywhere.
+add father name below member name in member card and metrimonial card
+
+remove margin above the page title should be like dashboard on each page
+
+
+
